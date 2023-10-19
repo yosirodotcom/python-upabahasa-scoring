@@ -1,14 +1,16 @@
 import customtkinter as ctk
 import tkinter as tk
-from tkinter import filedialog
+from tkinter import filedialog, messagebox
 import pandas as pd
 import warnings
+import os
 
 # import missingno as msno
 
 rumus_grammar = pd.DataFrame(
     {
         "g1": [
+            0,
             1,
             2,
             3,
@@ -51,6 +53,7 @@ rumus_grammar = pd.DataFrame(
             40,
         ],
         "g2": [
+            21,
             21,
             22,
             24,
@@ -98,6 +101,7 @@ rumus_grammar = pd.DataFrame(
 rumus_listening = pd.DataFrame(
     {
         "l1": [
+            0,
             1,
             2,
             3,
@@ -150,6 +154,7 @@ rumus_listening = pd.DataFrame(
             50,
         ],
         "l2": [
+            25,
             25,
             26,
             27,
@@ -207,6 +212,7 @@ rumus_listening = pd.DataFrame(
 rumus_reading = pd.DataFrame(
     {
         "r1": [
+            0,
             1,
             2,
             3,
@@ -259,6 +265,7 @@ rumus_reading = pd.DataFrame(
             50,
         ],
         "r2": [
+            22,
             22,
             23,
             24,
@@ -334,25 +341,33 @@ def create_table(file_paths):
         df = pd.concat([pd.read_excel(file_path) for file_path in file_paths])
     df = df[["No. Peserta", "Section 1", "Section 2", "Section 3"]]
     df.columns = ["ID", "l1", "g1", "r1"]
+    df = df[(df["l1"] != 0) | (df["g1"] != 0) | (df["r1"] != 0)]
+    # print(df.info())
     df = df.merge(rumus_listening, on="l1", how="left")
     df = df.merge(rumus_grammar, on="g1", how="left")
     df = df.merge(rumus_reading, on="r1", how="left")
     df["skor"] = round((df["l2"] + df["g2"] + df["r2"]) * 10 / 3)
     df.loc[df["skor"] < 310, "skor"] = 310
-    # cek apakah ada l1=0?
     df["hadir"] = "TRUE"
     df = df.sort_values(by=["ID"]).reset_index(drop=True)
+
     # ubah Dtype
-    # df["ID"] = df["ID"].astype("int64")
-    # df["l1"] = df["l1"].astype("int64")
-    # df["g1"] = df["g1"].astype("int64")
-    # df["r1"] = df["r1"].astype("int64")
-    # df["l2"] = df["l2"].astype("int64")
-    # df["g2"] = df["g2"].astype("int64")
-    # df["r2"] = df["r2"].astype("int64")
-    # df["skor"] = df["skor"].astype("int64")
-    # print(df.isnull().any())
-    print(df[df["g2"].isnull()])
+    df["ID"] = df["ID"].astype("int64")
+    df["l1"] = df["l1"].astype("int64")
+    df["g1"] = df["g1"].astype("int64")
+    df["r1"] = df["r1"].astype("int64")
+    df["l2"] = df["l2"].astype("int64")
+    df["g2"] = df["g2"].astype("int64")
+    df["r2"] = df["r2"].astype("int64")
+    df["skor"] = df["skor"].astype("int64")
+
+    # save table to same path as first file
+    output_path = os.path.join(os.path.dirname(file_paths[0]), "output.xlsx")
+    df.to_excel(output_path, index=False)
+    messagebox.showinfo("Success", "Table saved successfully!")
+    output_path = os.path.join(os.path.dirname(file_paths[0]), "output.xlsx")
+    os.startfile(os.path.dirname(output_path))
+    root.destroy()
 
 
 # Create the main window
