@@ -1,15 +1,16 @@
-# Create Conda Env:
-conda create --prefix C:\Users\ASUS\Documents\pythonenv\python-upabahasa python=3.9 --no-default-packages
-
-conda create --prefix G:\myvenv\python-upabahasa python=3.9 --no-default-packages
+# Create Python Env:
+python -m venv C:\Users\ASUS\Documents\pythonenv\python_upabahasa
+python -m venv G:\myvenv\python_upabahasa
 
 # To activate this environment, use cmd prompt     
-conda activate C:\Users\ASUS\Documents\repos\python-upabahasa-scoring\UsersASUSDocumentspythonenvpython-upabahasa
-
-conda activate G:\myvenv\python-upabahasa
-
+C:\Users\ASUS\Documents\pythonenv\python_upabahasa\Scripts\activate.bat
+G:\myvenv\python_upabahasa\Scripts\activate.bat
 
 # To deactivate an active environment, use
-conda deactivate
 
 # Install library
+pip install pandas
+pip install tk
+pip install customtkinter
+pip install openpyxl
+pip install missingno

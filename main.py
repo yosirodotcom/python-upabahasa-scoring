@@ -2,6 +2,9 @@ import customtkinter as ctk
 import tkinter as tk
 from tkinter import filedialog
 import pandas as pd
+import warnings
+
+# import missingno as msno
 
 rumus_grammar = pd.DataFrame(
     {
@@ -326,7 +329,9 @@ def select_files():
 
 
 def create_table(file_paths):
-    df = pd.concat([pd.read_excel(file_path) for file_path in file_paths])
+    with warnings.catch_warnings(record=True):
+        warnings.simplefilter("always")
+        df = pd.concat([pd.read_excel(file_path) for file_path in file_paths])
     df = df[["No. Peserta", "Section 1", "Section 2", "Section 3"]]
     df.columns = ["ID", "l1", "g1", "r1"]
     df = df.merge(rumus_listening, on="l1", how="left")
@@ -337,7 +342,17 @@ def create_table(file_paths):
     # cek apakah ada l1=0?
     df["hadir"] = "TRUE"
     df = df.sort_values(by=["ID"]).reset_index(drop=True)
-    print(df[df["skor"] <= 310])
+    # ubah Dtype
+    # df["ID"] = df["ID"].astype("int64")
+    # df["l1"] = df["l1"].astype("int64")
+    # df["g1"] = df["g1"].astype("int64")
+    # df["r1"] = df["r1"].astype("int64")
+    # df["l2"] = df["l2"].astype("int64")
+    # df["g2"] = df["g2"].astype("int64")
+    # df["r2"] = df["r2"].astype("int64")
+    # df["skor"] = df["skor"].astype("int64")
+    # print(df.isnull().any())
+    print(df[df["g2"].isnull()])
 
 
 # Create the main window
