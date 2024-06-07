@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "upt-bahasa-2",
+  "private_key_id": "2686a21ae988e73ad12e150e3f03cda0fe4ee2b4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCzQZ7pz4ZM6t4F\nzhAYKyRRjNtm4Jl9/ou5znKl1ZqMed5bi5U8myqlHm5tl9fnLIgmEZtIwVLtiVJx\ne2JK5Y+2APHg4qmNEDzeZ6uS7ZTW6mnYHwHz6pbD6bCfFcK1TwUm7o2a0dXH0/13\nkZEQScwL81RgV5RYUP52MK0dz5MeNDJecyRHajx0XkDcIv7jvgPfcKxmllX7+xM0\nPk3A0UqPKSh6lX0p7O1kTl9AmxkXxAg/60EwDp8KnoRBbSjRg0fYUIWYDP2Nk/v4\n8G1TUbeKQX2iIpHf5ubvZvn6CSIk6hGj3YnQTApphwhZS09s2q7IVjMALX7wJDYP\nS2CiVx/XAgMBAAECggEAE8GcuRo1LA8Kr0sZvQAsPYyvtbP1VsySK8VUH3DeWrMn\nzaEhro9PcOlctFly4zimPMPeAHPGJwXmfzlhCO4qG54ZCncQxspOWxjD8SqcJ9+o\nELjCJ1bojOkZnT7xubfe0n6iPrj3vdFgcygo+8mWYo7L8t5ULDOpB++vdMSm60IX\nmqdK2a3fM2GNBww5cLjx+6UX3cZ+lnhdkEaNsIk+Ju6cVWs0wWE6TjVvm+2DNdle\nLELvrJxM/dEE1hnrLdb3ED49N51pGoQmHqS8c6ziqycXcncZn5aFapt++Tb5WiJQ\nAi1H69JAqZIKEhjuPjiKLTohDzmbox4gnuxYF1J2qQKBgQD8i7jDeQvtC9fGQnUb\n52Qq4sFKcHB3tk4Kcu/qen28sRWFLEVZ0qCRJ2P6EhM9iUlRTfnAnohlAcB7wIfK\noiGkMFjrVLdHqKYAvp/wKivpMeRbQhDHOiB2enJdMgtzMxSziOS1bLwWYCef9JET\naP87ThOicwD2joMBauGf4y3B0wKBgQC1tUd0y+7HBGjVqnhQ5PIDElZwkYOr1sdL\nt+jq6MvkVzELrruFrDf9+zb1B4EeY1NWYLt0dpbK2Q4kCbZKYaIu5tTIKoC/XCYQ\nZOvUTIHWbLdZZcGeLbD/G5KzOfmxmViI3e4WTtubAwDuZWadKDqQcTYdPrdmlD/s\n+d2mGx1jbQKBgQD3iEu07LRPx8fav9DhZM+9aTxjpgnWjI25mCaoAR+1Dy00tsvS\n2qwfGijYN1c8fY+rbW5a6ghuWGU95twyNPAcanb9Uq/CQP9Uw4Mod21KyGg3Om4P\nmF2xQxtNVXv7khm8T3U8jjNdCypLkf+Qst1YV5LPK0HKaKznesdjW9zBmQKBgCS/\ngrIGREYPiDwd+7MwehlQ7hZZ920bRLb1fK91YTbOw2Z/cgE4sSI2Wgj3+Y7xu3ru\nmTqWeSyQ9SEorashT7F4kXPh1KPeuPv7zQ3kYyXAWtxDjgK1buRI6URB51OZlaQo\nbewpCpSw6NFNxJDn/+ASZUVI18JxHPSKG99qAGmJAoGBAKqht/ZaE4eGQB3Oj/o7\n1oL5XlD+fhuAFHPRG74lzJGyVhnuPRl7XRmZizU72AJMEEZymh4cs3SyGbRzvOMc\nEQfE0tUsQO5F53/St4Q3ZHt7RdUSygvFDRCMATHAHfEOwX7n7Pu5IZ8qa12K/B1l\nN+Csj8DoWfPHuKI9BoczjuDx\n-----END PRIVATE KEY-----\n",
+  "client_email": "uptbahasapolnep@upt-bahasa-2.iam.gserviceaccount.com",
+  "client_id": "112438651718059156703",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/uptbahasapolnep%40upt-bahasa-2.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
