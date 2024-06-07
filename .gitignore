@@ -1,0 +1,8 @@
+# Ignore the key.json file
+key.json
+
+# Other files and directories to ignore
+*.log
+*.tmp
+__pycache__/
+.env
